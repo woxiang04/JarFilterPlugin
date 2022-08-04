@@ -1,0 +1,32 @@
+plugins {
+    id "java-gradle-plugin"
+    id "maven-publish"
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs("../../buildSrc/src/main/jarfilter/java")
+        }
+    }
+}
+
+//afterEvaluate {
+//
+//}
+//执行publishMavenPublicationToMavenRepository来发布
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId "com.github.nekocode"
+            artifactId "JarFilterPlugin"
+            version "3.0.0"
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url = "../../mvn"
+        }
+    }
+}

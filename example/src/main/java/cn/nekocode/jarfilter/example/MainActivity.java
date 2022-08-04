@@ -16,13 +16,14 @@
 
 package cn.nekocode.jarfilter.example;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.fragment.app.FragmentActivity;
 
 /**
  * @author nekocode
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
